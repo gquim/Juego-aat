@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { JuegoComponent } from './juego/juego.component';
 
 interface Card {
   id: number;
@@ -13,7 +12,7 @@ interface Card {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HttpClientModule,FormsModule,JuegoComponent],
+  imports: [HttpClientModule,FormsModule],
   providers:[ApiService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

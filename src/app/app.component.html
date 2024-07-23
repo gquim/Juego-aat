@@ -1,0 +1,16 @@
+<section>
+  <div id="game-board">
+      @for (card of cards; track $index) {
+        <div class="card" (click)="flipCard(card)" [class.flipped]="card.flipped">
+          @if (card.flipped) {
+            <img [src]="card.image" alt="Memory Card" (click)="flipCard(card)">
+          }
+          
+        </div>
+      }
+  </div>
+  <div class="contenedor">
+    <span class="boton" (click)="resetGame()">Reiniciar</span>
+  </div>
+  
+</section>
